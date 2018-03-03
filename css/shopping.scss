@@ -1,0 +1,700 @@
+@charset "utf-8";
+
+html {
+  font-size: 62.5%;
+ 
+}
+
+@mixin fontsize($size: 24, $base: 10) {
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}
+
+$ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+$aka     : #9d1a2d;
+$gray    : #b0b0b0;
+$hadairo : #e2ddd4;
+$kogocha : #887f69;
+$base_color : #f9f8f6;
+
+img{
+    max-width: 100%;//原寸サイズであるpx以上の横幅になると、原寸サイズで止まる
+}
+
+
+header{
+#header_in{
+  
+  background: $base_color;
+  
+  .sp_menu_toggle {
+  display: none;
+}//.sp_menu_toggle
+
+
+  @media (max-width: 550px) {//スマホ版
+  h1{
+     
+      text-align: center;
+      margin-top: 10px;
+  }
+    .sp_navi{
+        text-align: center;
+    }
+  }// max-width: 550px
+
+    @media (min-width: 551px) {//PC版
+    
+    .sp_navi{
+      display: none;
+          }// .sp_navi
+    }
+    #sp_navi_btn {
+  cursor: pointer;
+    }//#sp_navi_btn
+
+    
+
+ 
+ @media (max-width: 550px) {
+ 
+ .pc_navi{
+     display: none;
+ }
+ }// @media
+    #header_in{
+      padding: 15px 0 10px 0;
+      #u-max-full-width{
+      margin-top: 10px;
+      @media (max-width: 550px) {
+          padding-top: 20px;
+      }
+      }// #u-max-full-width
+      
+   }// #header_in
+
+    .pc_navi_li{
+      margin:0;
+      padding:0;
+     
+   
+      li{
+
+        margin: 20px 0 0 0;
+        padding: 0;
+        padding-right: 10px;
+        display: inline-block;
+        }
+
+  }//.pc_navi_li PC表示版の右上メニュー表示
+ 
+ }//#header_in
+}//header
+
+
+
+
+ body{
+     
+   background: $base_color;
+   
+    .owl-nav {//カルーセル
+  display: none; }
+.owl-dots {
+  position: relative;
+  display:inline-block !important;
+  top: 0; }
+.owl-dots .owl-dot {
+  display: inline-block !important; }
+.main .owl-theme .owl-dots .owl-dot span {
+    display: block;
+    border-radius: 0;
+    width: 25px !important;
+    height: 2px !important;
+    margin: 0 8px 0 0;
+    background-color: #aaaaaa; }
+.owl-dots .active span {
+  background-color: #9d1a2d !important; }
+   
+   .section_title{
+   @media (max-width: 550px) {//スマホ版
+          
+              text-align: center;
+              padding-top: 10px;
+              margin-bottom: 10px;
+              .pc_title{
+                  display: none;
+              }
+     
+ }//@media new itemタイトル
+     @media (min-width: 551px) {//PC版
+                 text-align: center;
+              padding-top: 5px;
+              margin-bottom: 10px;
+              .sp_title{
+                  display: none;
+              }
+     }
+   }// .section_title new itemタイトル
+   
+   
+   
+   #new_item//親要素
+{
+    
+    display: flex;
+    flex-wrap: wrap;//画面の制限地点まで来ると自動で折り返してくれる
+    justify-content: space-between;//両端の位置を親要素の端に合わせて配置&真ん中の要素は両端のちょうど真ん中においてくれる
+    
+  .new_item-box
+{
+   
+    width: 29%;
+    background:#fff;
+    padding: 14px;
+    
+     @media (max-width: 550px) {
+          width: 40%;
+     }
+    
+}//.new_item-box
+}//#new_item
+
+h3{
+   @media (min-width : 550px) {
+              text-align: center;
+              padding-top: 10px;
+              margin-bottom: 10px;
+     
+ }//@media popular itemタイトル
+     @media (max-width: 551px) {
+              text-align: center;
+              padding-top: 10px;
+              margin-bottom: 10px;
+     }
+   }//h3 popular itemタイトル
+   
+#popular_item//親要素
+{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+    
+  .popular_item-box
+{
+    
+    width: 29%;
+    height: 100%;
+    background:#fff;
+    padding: 14px;
+    
+    @media (max-width: 550px) {//PC表示設定のままだと小さく表示されてしまうためスマフォ表示では大きくする
+          width: 40%;
+     }
+     
+}//.popular_item-box
+}//#popular_item
+
+h4{
+   @media (min-width : 550px) {
+              text-align: center;
+              padding-top: 10px;
+              margin-bottom: 10px;
+     
+ }//@media shopping guideタイトル
+     @media (max-width: 551px) {
+              text-align: center;
+              padding-top: 10px;
+              margin-bottom: 10px;
+     }
+   }//h4 shopping guideタイトル
+
+#gide//親要素
+{
+    
+    display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+    @media (max-width: 550px) {//スマホ版
+               width: 200%;
+               flex-direction: column;
+      }
+      
+      .otodoke_title{
+          color:$kogocha;
+           font-weight: bold;
+           padding-top: 10px;
+           margin-bottom: 10px;
+      }
+      
+      .kessai_title{
+           color:$kogocha;
+           font-weight: bold;
+           padding-top: 10px;
+           margin-bottom: 10px;
+      }
+      
+.guide_title{
+    color:$kogocha;
+    font-weight: bold;
+   
+}
+  .guide-box
+{
+    
+    width: 49%;
+    background:#fff;
+    padding-bottom: 15px;
+    
+    @media (max-width: 550px) {//スマホ版
+      
+    flex-direction: column;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+    
+ .mini_title{
+   color:$kogocha;
+   font-size: 15px;
+   font-weight: bold;
+ }
+ p{
+     font-size: 12px;
+     margin: 2;
+ }//p
+ img{
+      margin-bottom: 10px;
+ }
+  
+  
+}//.guide-box
+}//#gide
+ }//body
+ 
+
+.side_title {
+   padding: 0.5em 1em;
+    margin-bottom: 10px;
+    background-color: $kogocha;
+    
+}
+
+    @media (max-width: 550px) {//スマホ版
+            .about{
+            //width: 65%;
+            float: left;
+            margin: 0 20px 10px 0;
+            }
+            
+            .new_item{
+             text-align: center;
+            }
+        }// @media
+      
+.yajirushi{
+    background-image: url("../images/top/next_icon_gray.png");
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    .img{
+        margin-top: 10px;
+    }
+    
+}// .yajirushi
+
+.shitayajirushi{
+    background-image: url("../images/top/down_icon.png");
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+}
+.search{
+    margin-bottom: 10px;
+    
+}
+@media (max-width: 550px) {//スマホ版
+    .search{
+        text-align: center;
+    }
+    .search img{
+        display: none;
+        padding-top: 10px;
+    }
+}//@media
+
+.search {//検索窓
+    input {
+	    background-image:url('../images/top/mushimegane.jpeg') ;
+	    background-position: right center;
+	    background-repeat: no-repeat;
+	    margin-bottom: 10px;
+    }
+	
+}//検索窓
+     
+     .cate_list{
+         list-style: none; 
+         padding: 0;
+         margin: 0;
+      
+     
+         }
+     
+     .more_btn{
+         text-align: center;
+         margin-bottom: 20px;
+     }
+     
+
+    .pagetop{
+       text-align: right;
+       border-bottom: 3px solid #887f69;
+        @media (max-width: 550px) {
+            text-align: center;
+            padding-top: 20px;
+        }
+   }
+   
+   .pc_footeer_navi{
+      margin:0;
+      //padding:0;
+      padding: 20px;
+      
+.pc_footernavi_li{
+        display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     list-style:none;
+     
+     @media (max-width: 550px) {
+        // display: flex;
+         //flex-wrap: wrap;
+    // justify-content: space-between;
+      list-style:none;
+    font-size: 20%;
+     }
+     
+    }//.pc_footernavi_li
+   }//.pc_footeer_navi
+   .copy{
+       text-align: center; 
+       color: $gray;
+   }
+
+
+//ここから以下listページ
+
+.breadcrumb {
+  margin-left:0;
+  background: $hadairo;
+  padding: 9px 10px;
+  overflow: hidden;
+  a{
+      color:$kogocha;
+      span{
+      margin-left: 5px;
+      }
+  }
+}
+
+.breadcrumb li{
+  display:inline;/*横に並ぶように*/
+  list-style: none;
+  font-size: 10px;
+  font-weight: bold;/*太字*/
+}
+
+.breadcrumb li:after{/* >を表示*/
+  content: '/';
+  padding: 0 3px;
+  color: $kogocha;
+}
+
+
+.zengo_btn{
+
+ display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     list-style:none;
+.back_btn{
+   
+    padding: 0.5em 2em;
+    margin-top: 15px;
+   margin-bottom: 10px;
+    background-color: $kogocha;
+     color: #fff;
+    font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+.next_btn{
+    padding: 0.5em 2em;
+    margin-top: 15px;
+     margin-bottom: 10px;
+    background-color: $kogocha;
+    color: #fff;
+    font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+}
+
+//この下からproduct_page
+.haikei{
+     background-color: #fff;
+     padding: 60px;
+     padding-top: 120px;//なぜ反映されていないようなのか
+}
+
+    .product_name{
+   float: left;
+   font-size: 10px;
+   font-weight: bold;
+   color: #000; 
+   list-style: none;
+   
+    }//.product_name
+  
+ .product_no{
+      float: right;
+      color:$gray;
+      list-style: none;
+      
+ }//.product_no
+ //.shouhin_title{
+   
+ //}//.shouhin_title
+
+.table input{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+
+/* PC版の商品画像部分 */
+
+.product_image{//PC版の塊
+     border-top: 1px solid $gray;
+    padding-top: 25px; //線と写真の間に余白
+    clear: both;
+     display: flex;
+    
+    
+    border-bottom: 1px solid $gray;
+    
+    .big-image{
+        width: 73%;
+        //padding-right: 10px;
+         flex-wrap: wrap;
+     //justify-content: flex-start;
+     list-style:none;
+     cursor: pointer;
+     
+    }
+ 
+    .small-image{
+             
+        width: 25%;
+        list-style:none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items:flex-start;
+           }//.small-image
+    .small-image li{  
+     width: 49%;
+     margin-bottom: 5px;
+     line-height: 0;
+     
+    }
+}//.product_image　幅とか余白を要微調整
+
+
+/* 商品画像のスマホ版まとめ */
+@media (max-width: 550px) {
+    .haikei{
+        padding: 20px;
+    }
+    .product_image {
+         flex-direction: column;
+         border-bottom: 1px solid $gray;
+         
+    .big-image {
+        width: 100%;
+    }
+    .small-image{
+        width: 100%;
+        list-style:none;
+        display: flex;
+       
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items:flex-start;
+    }//.small-image
+           
+    .small-image li{  
+        width: 19%;
+    }
+} // .product_image
+            
+}//@media (max-width: 550px)
+ 
+
+
+h4{
+    float:left;
+     
+}//color_sizeのタイトル部分
+
+/* color/size表 */
+table{//pc版の表
+   
+    border: 0.5px $gray solid;
+    text-align: center;
+    width: 100%;//%で指定しないとスマフォ表示のときに画面からはみ出る
+    border-bottom: 0.5px $gray solid;
+}
+
+.color-size td{//pc版の表
+    
+    border: 0.5px $gray solid;
+    text-align: center;
+    width: 30%;//%で指定しないとスマフォ表示のときに画面からはみ出る
+    
+}
+
+.color-size th{
+    margin-top: 10px;
+    text-align: center;
+    color: $kogocha;
+    background-color: $base_color;
+    //font-weight: bold;
+    width: 10%;
+    border: 0.5px $gray solid;
+}
+
+.color_size input{
+    margin-bottom: -5px;
+}
+
+@media (max-width: 550px) {
+   table{
+       width: 100%;
+       text-align: center;
+       //margin-left: 5px;
+   }
+   .color-size td{
+       width: 25%;
+   }
+   .color-size th{
+       width: 20%;
+       
+   } 
+    
+}//@media (max-width: 550px)
+
+
+
+/*金額・数量・カートボタン */
+   .product-info{
+       display: flex;
+       //width: 30%
+       .cart_btn{
+           margin-left: 30px;
+           margin-top: 15px;
+           padding-top: 15px;
+       }
+       .price-box{
+           border-top: 0.5px $gray solid;
+           margin-top: 20px;
+           margin-right: 110px;
+           padding-top: 20px;
+           width:105%;
+           span {
+              color: #e80f66;
+              font-size: 22px;
+              font-weight: bold;
+           }//span
+           p{
+               display: inline;
+               margin-left: 70px;
+           }
+       }//.price-box
+       
+       
+       .quantity-box{
+           display: block;
+           border-top: 0.5px $gray solid;
+           margin-top: 20px;
+           padding-top: 20px;
+           width: 105%;
+           .img{
+               margin-right: 100px;
+           }
+           .form{
+                 
+                margin-left: 55px;
+                
+           }//.quantity-box input
+       }//.quantity-box
+    }// .product-info
+   
+
+ @media (max-width: 550px) {
+        .product-info{
+       flex-direction: column;
+   }
+   .price-box{
+       padding-top: 20px;
+   }
+   .quantity-box{
+       padding-top: 20px;
+       //display: inline-block;
+        .quantity-box img{
+            text-align: center;
+            }//.quantity-box img
+        .form{
+            margin-left: 10px;
+            width: 100px;
+            }
+   }//.quantity-box
+   
+    .product-info{
+   .cart_btn{
+ 
+        width: 100%;
+        margin-left: 5px;
+        margin-bottom: 10px;
+        margin-top: 8px;
+        border-top: 0.5px $gray solid;
+   }
+    }
+    
+    
+    } //@media (max-width: 550px)
+
+
+h6{//商品説明
+    border-top: 1px solid $gray;
+    padding-top: 20px;
+    color: $kogocha;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid $gray;
+}
+
+.setumei_title{//>■説明タイトル
+    padding-top: 5px; //線と写真の間に余白
+    clear: both;
+    color: $kogocha;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+@media (max-width: 550px) {
+    h6{
+        border-top: none;
+    }
+}
+//ディベロッパーツールでscssで試しに数値を入れたいとき、該当部分のscssが表示されずにskeltonしかない場合は
+//どのようにして試せばよいか?
+//余白が大きすぎやしないか
