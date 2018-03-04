@@ -37,9 +37,11 @@ header{
      
       text-align: center;
       margin-top: 10px;
+      margin-bottom: 8px;
   }
     .sp_navi{
         text-align: center;
+        margin-bottom: 10px;
     }
   }// max-width: 550px
 
@@ -271,13 +273,39 @@ h4{
 }//#gide
  }//body
  
-
+.search_back{
+    background-color: #fff;
+    width: 200px;
+    padding: 8px;
+    margin-bottom: 8px;
+}
 .side_title {
    padding: 0.5em 1em;
-    margin-bottom: 10px;
+   margin-bottom: 10px;
     background-color: $kogocha;
     
 }
+.side_catetitle {
+   padding: 0.5em 1em;
+   //margin-bottom: 10px;
+    background-color: $kogocha;
+    
+}
+
+.side_abouttitle {
+   padding: 0.5em 1em;
+   //margin-bottom: 10px;
+    background-color: $kogocha;
+    
+}
+
+.side_shopinfotitle {
+   padding: 0.5em 1em;
+   //margin-bottom: 10px;
+    background-color: $kogocha;
+    
+}
+
 
     @media (max-width: 550px) {//スマホ版
             .about{
@@ -290,6 +318,15 @@ h4{
              text-align: center;
             }
         }// @media
+        
+.cate_back{
+    background-color: #fff;
+    width: 200px;
+    padding: 8px;
+    padding-top: 10px;
+    padding-right: 4px;
+    margin-bottom: 8px;
+}
       
 .yajirushi{
     background-image: url("../images/top/next_icon_gray.png");
@@ -308,7 +345,7 @@ h4{
 }
 .search{
     margin-bottom: 10px;
-    
+    text-align: left;
 }
 @media (max-width: 550px) {//スマホ版
     .search{
@@ -334,13 +371,32 @@ h4{
          list-style: none; 
          padding: 0;
          margin: 0;
-      
-     
-         }
+             }
+             
+      .about_back{
+        background-color: #fff;
+        width: 200px;
+        padding: 8px;
+        padding-top: 15px;
+        padding-right: 4px;
+        padding-bottom: 5px;
+        margin-bottom: 8px; 
+      }       
+             
+      .shopinfo_back{
+        background-color: #fff;
+        width: 200px;
+        padding: 8px;
+        padding-top: 15px;
+        padding-right: 4px;
+        padding-bottom: 5px;
+        margin-bottom: 8px;  
+      }         
+             
      
      .more_btn{
          text-align: center;
-         margin-bottom: 20px;
+         margin-bottom: 8px;
      }
      
 
@@ -385,7 +441,8 @@ h4{
 .breadcrumb {
   margin-left:0;
   background: $hadairo;
-  padding: 9px 10px;
+  padding: 9px 10px 7px;
+  margin-bottom: 7px;
   overflow: hidden;
   a{
       color:$kogocha;
@@ -442,27 +499,44 @@ h4{
 .haikei{
      background-color: #fff;
      padding: 60px;
-     padding-top: 120px;//なぜ反映されていないようなのか
+     //padding-top: 120px;
 }
 
+.shouhin_title{
+    margin-bottom: 15px;
+}
     .product_name{
    float: left;
-   font-size: 10px;
+   font-size: 15px;
    font-weight: bold;
    color: #000; 
    list-style: none;
+   margin-bottom: 30px;
    
     }//.product_name
   
  .product_no{
       float: right;
+      font-size: 8px;
       color:$gray;
       list-style: none;
       
  }//.product_no
- //.shouhin_title{
-   
- //}//.shouhin_title
+ 
+  @media (max-width: 550px) {
+       .shouhin_title{
+       display: block;
+       margin-bottom: 10px;
+       }
+       .product_name{
+       float: none;
+       margin-bottom: 6px;
+       }
+       .product_no{
+        float: none;
+        float: left;
+       }
+  }
 
 .table input{
     text-align: center;
@@ -512,7 +586,7 @@ h4{
 /* 商品画像のスマホ版まとめ */
 @media (max-width: 550px) {
     .haikei{
-        padding: 20px;
+        padding: 15px;
     }
     .product_image {
          flex-direction: column;
@@ -578,16 +652,20 @@ table{//pc版の表
 
 @media (max-width: 550px) {
    table{
-       width: 100%;
+       width: 110%;
        text-align: center;
-       //margin-left: 5px;
+       margin-bottom: 15px;
+       margin-left: -13px;
    }
    .color-size td{
        width: 25%;
+       padding: 8px;
+       font-size: 8px;
    }
    .color-size th{
        width: 20%;
-       
+       font-weight: normal;
+       padding: 8px;
    } 
     
 }//@media (max-width: 550px)
@@ -695,6 +773,55 @@ h6{//商品説明
         border-top: none;
     }
 }
-//ディベロッパーツールでscssで試しに数値を入れたいとき、該当部分のscssが表示されずにskeltonしかない場合は
-//どのようにして試せばよいか?
-//余白が大きすぎやしないか
+
+/* color/size2表 */
+table{//pc版の表
+   
+    border: 0.5px $gray solid;
+    text-align: center;
+    width: 100%;//%で指定しないとスマフォ表示のときに画面からはみ出る
+    border-bottom: 0.5px $gray solid;
+}
+
+.color-size2 td{//pc版の表
+    
+    border: 0.5px $gray solid;
+    text-align: center;
+    width: 30%;//%で指定しないとスマフォ表示のときに画面からはみ出る
+    
+}
+
+.color-size2 th{
+    margin-top: 10px;
+    text-align: center;
+    color: $kogocha;
+    background-color: $base_color;
+    //font-weight: bold;
+    width: 10%;
+    border: 0.5px $gray solid;
+}
+
+.color_size2 input{
+    margin-bottom: -5px;
+}
+
+@media (max-width: 550px) {
+   table{
+       width: 110%;
+       //text-align: center;
+       margin-bottom: 15px;
+       margin-left: -13px;
+   }
+   .color-size2 td{
+       width: 35%;
+       padding: 5px;
+       font-size: 8px;
+       text-align: left;
+   }
+   .color-size2 th{
+       width: 10%;
+       font-weight: normal;
+       padding: 5px;
+   } 
+    
+}//@media (max-width: 550px)
