@@ -12,9 +12,11 @@ header #header_in {
   @media (max-width: 550px) {
     header #header_in h1 {
       text-align: center;
-      margin-top: 10px; }
+      margin-top: 10px;
+      margin-bottom: 8px; }
     header #header_in .sp_navi {
-      text-align: center; } }
+      text-align: center;
+      margin-bottom: 10px; } }
   @media (min-width: 551px) {
     header #header_in .sp_navi {
       display: none; } }
@@ -155,9 +157,27 @@ body {
       body #gide .guide-box img {
         margin-bottom: 10px; }
 
+.search_back {
+  background-color: #fff;
+  width: 200px;
+  padding: 8px;
+  margin-bottom: 8px; }
+
 .side_title {
   padding: 0.5em 1em;
   margin-bottom: 10px;
+  background-color: #887f69; }
+
+.side_catetitle {
+  padding: 0.5em 1em;
+  background-color: #887f69; }
+
+.side_abouttitle {
+  padding: 0.5em 1em;
+  background-color: #887f69; }
+
+.side_shopinfotitle {
+  padding: 0.5em 1em;
   background-color: #887f69; }
 
 @media (max-width: 550px) {
@@ -167,6 +187,14 @@ body {
 
   .new_item {
     text-align: center; } }
+.cate_back {
+  background-color: #fff;
+  width: 200px;
+  padding: 8px;
+  padding-top: 10px;
+  padding-right: 4px;
+  margin-bottom: 8px; }
+
 .yajirushi {
   background-image: url("../images/top/next_icon_gray.png");
   background-position: right 10px center;
@@ -180,7 +208,8 @@ body {
   background-repeat: no-repeat; }
 
 .search {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  text-align: left; }
 
 @media (max-width: 550px) {
   .search {
@@ -200,9 +229,27 @@ body {
   padding: 0;
   margin: 0; }
 
+.about_back {
+  background-color: #fff;
+  width: 200px;
+  padding: 8px;
+  padding-top: 15px;
+  padding-right: 4px;
+  padding-bottom: 5px;
+  margin-bottom: 8px; }
+
+.shopinfo_back {
+  background-color: #fff;
+  width: 200px;
+  padding: 8px;
+  padding-top: 15px;
+  padding-right: 4px;
+  padding-bottom: 5px;
+  margin-bottom: 8px; }
+
 .more_btn {
   text-align: center;
-  margin-bottom: 20px; }
+  margin-bottom: 8px; }
 
 .pagetop {
   text-align: right;
@@ -232,7 +279,8 @@ body {
 .breadcrumb {
   margin-left: 0;
   background: #e2ddd4;
-  padding: 9px 10px;
+  padding: 9px 10px 7px;
+  margin-bottom: 7px;
   overflow: hidden; }
   .breadcrumb a {
     color: #887f69; }
@@ -279,21 +327,37 @@ body {
 
 .haikei {
   background-color: #fff;
-  padding: 60px;
-  padding-top: 120px; }
+  padding: 60px; }
+
+.shouhin_title {
+  margin-bottom: 15px; }
 
 .product_name {
   float: left;
-  font-size: 10px;
+  font-size: 15px;
   font-weight: bold;
   color: #000;
-  list-style: none; }
+  list-style: none;
+  margin-bottom: 30px; }
 
 .product_no {
   float: right;
+  font-size: 8px;
   color: #b0b0b0;
   list-style: none; }
 
+@media (max-width: 550px) {
+  .shouhin_title {
+    display: block;
+    margin-bottom: 10px; }
+
+  .product_name {
+    float: none;
+    margin-bottom: 6px; }
+
+  .product_no {
+    float: none;
+    float: left; } }
 .table input {
   text-align: center;
   margin-bottom: 0; }
@@ -325,7 +389,7 @@ body {
 /* 商品画像のスマホ版まとめ */
 @media (max-width: 550px) {
   .haikei {
-    padding: 20px; }
+    padding: 15px; }
 
   .product_image {
     flex-direction: column;
@@ -369,14 +433,20 @@ table {
 
 @media (max-width: 550px) {
   table {
-    width: 100%;
-    text-align: center; }
+    width: 110%;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-left: -13px; }
 
   .color-size td {
-    width: 25%; }
+    width: 25%;
+    padding: 8px;
+    font-size: 8px; }
 
   .color-size th {
-    width: 20%; } }
+    width: 20%;
+    font-weight: normal;
+    padding: 8px; } }
 /*金額・数量・カートボタン */
 .product-info {
   display: flex; }
@@ -447,5 +517,44 @@ h6 {
 @media (max-width: 550px) {
   h6 {
     border-top: none; } }
+/* color/size2表 */
+table {
+  border: 0.5px #b0b0b0 solid;
+  text-align: center;
+  width: 100%;
+  border-bottom: 0.5px #b0b0b0 solid; }
+
+.color-size2 td {
+  border: 0.5px #b0b0b0 solid;
+  text-align: center;
+  width: 30%; }
+
+.color-size2 th {
+  margin-top: 10px;
+  text-align: center;
+  color: #887f69;
+  background-color: #f9f8f6;
+  width: 10%;
+  border: 0.5px #b0b0b0 solid; }
+
+.color_size2 input {
+  margin-bottom: -5px; }
+
+@media (max-width: 550px) {
+  table {
+    width: 110%;
+    margin-bottom: 15px;
+    margin-left: -13px; }
+
+  .color-size2 td {
+    width: 35%;
+    padding: 5px;
+    font-size: 8px;
+    text-align: left; }
+
+  .color-size2 th {
+    width: 10%;
+    font-weight: normal;
+    padding: 5px; } }
 
 /*# sourceMappingURL=shopping.css.map */
