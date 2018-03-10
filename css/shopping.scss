@@ -118,6 +118,13 @@ header{
 .owl-dots .active span {
   background-color: #9d1a2d !important; }
    
+   @media (max-width: 550px) {
+  .owl-carousel .owl-theme{
+      overflow-x: hidden;
+  }
+   }// @media (max-width: 550px)
+  
+   
    .section_title{
    @media (max-width: 550px) {//スマホ版
           
@@ -154,7 +161,9 @@ header{
     width: 29%;
     background:#fff;
     padding: 14px;
-    
+.text-center{
+    font-size: 8px;
+}
      @media (max-width: 550px) {
           width: 40%;
      }
@@ -176,12 +185,14 @@ h3{
      }
    }//h3 popular itemタイトル
    
-#popular_item//親要素
+.popular_item//親要素
 {
      display: flex;
      flex-wrap: wrap;
      justify-content: space-between;
-    
+  .text-center{
+    font-size: 8px;
+}
   .popular_item-box
 {
     
@@ -195,7 +206,7 @@ h3{
      }
      
 }//.popular_item-box
-}//#popular_item
+}//.popular_item
 
 h4{
    @media (min-width : 550px) {
@@ -217,6 +228,7 @@ h4{
     display: flex;
      flex-wrap: wrap;
      justify-content: space-between;
+     
     @media (max-width: 550px) {//スマホ版
                width: 200%;
                flex-direction: column;
@@ -234,6 +246,7 @@ h4{
            font-weight: bold;
            padding-top: 10px;
            margin-bottom: 10px;
+           margin-top: 10px;
       }
       
 .guide_title{
@@ -244,15 +257,19 @@ h4{
   .guide-box
 {
     
-    width: 49%;
+    width: 47%;
     background:#fff;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
     
     @media (max-width: 550px) {//スマホ版
       
     flex-direction: column;
     padding-bottom: 10px;
     margin-bottom: 10px;
+    img{
+        width: 95%;
+    }
   }
     
  .mini_title{
@@ -273,6 +290,11 @@ h4{
 }//#gide
  }//body
  
+ .side_bar{
+     p{
+         font-size: 8px;
+     }
+ }
 .search_back{
     background-color: #fff;
     width: 200px;
@@ -297,7 +319,10 @@ h4{
    //margin-bottom: 10px;
     background-color: $kogocha;
     
+    
 }
+
+
 
 .side_shopinfotitle {
    padding: 0.5em 1em;
@@ -309,14 +334,17 @@ h4{
 
     @media (max-width: 550px) {//スマホ版
             .about{
-            //width: 65%;
+            width: 50%;
             float: left;
-            margin: 0 20px 10px 0;
+            margin: 0 8px 10px 0;
+            
             }
             
             .new_item{
              text-align: center;
             }
+            
+            
         }// @media
         
 .cate_back{
@@ -348,6 +376,7 @@ h4{
     text-align: left;
 }
 @media (max-width: 550px) {//スマホ版
+   
     .search{
         text-align: center;
     }
@@ -355,6 +384,8 @@ h4{
         display: none;
         padding-top: 10px;
     }
+    
+      
 }//@media
 
 .search {//検索窓
@@ -371,6 +402,12 @@ h4{
          list-style: none; 
          padding: 0;
          margin: 0;
+         .yajirushi{
+             font-size: 8px;
+         }
+             }
+      .side_text{
+                 font-size: 8px;
              }
              
       .about_back{
@@ -381,7 +418,7 @@ h4{
         padding-right: 4px;
         padding-bottom: 5px;
         margin-bottom: 8px; 
-      }       
+      }   // .about_back    
              
       .shopinfo_back{
         background-color: #fff;
@@ -399,28 +436,59 @@ h4{
          margin-bottom: 8px;
      }
      
+     @media (max-width: 550px) {//スマホ版
+   
+    .search_back{
+        width: auto;
+    }
+    .cate_back{
+        width: auto;
+            }
+            
+     .about_back{
+        width: auto;
+     }
+     
+      .shopinfo_back{
+           width: auto;
+      }
+      
+      .search input {
+         margin-bottom: 0; 
+      }
+      
+}//@media
 
     .pagetop{
+      
        text-align: right;
-       border-bottom: 3px solid #887f69;
+       
+       border-bottom: 1px solid #887f69;
+       //width: 1000px;
+       //margin-right: 50px;
+       
+       
         @media (max-width: 550px) {
             text-align: center;
             padding-top: 20px;
-        }
+            //width: 80%; 
+            }
    }
    
    .pc_footeer_navi{
       margin:0;
-      //padding:0;
-      padding: 20px;
+      padding-top: 15px;
+      padding-bottom: 10px;
       
 .pc_footernavi_li{
         display: flex;
      flex-wrap: wrap;
      justify-content: center;
      list-style:none;
+     font-size: 20%;
+     margin-bottom: 5px;
      
-     @media (max-width: 550px) {
+    @media (max-width: 550px) {
         // display: flex;
          //flex-wrap: wrap;
     // justify-content: space-between;
@@ -429,10 +497,14 @@ h4{
      }
      
     }//.pc_footernavi_li
+    .pc_footernavi_li li{
+        margin-bottom: 0;
+     }
    }//.pc_footeer_navi
    .copy{
        text-align: center; 
        color: $gray;
+       font-size: 10%;
    }
 
 
@@ -444,8 +516,11 @@ h4{
   padding: 9px 10px 7px;
   margin-bottom: 7px;
   overflow: hidden;
+  border-radius: 5px;
+  
   a{
       color:$kogocha;
+      text-decoration: none;
       span{
       margin-left: 5px;
       }
@@ -764,13 +839,25 @@ h6{//商品説明
     padding-top: 5px; //線と写真の間に余白
     clear: both;
     color: $kogocha;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: bold;
+}
+
+.setumei_text{
+    font-size: 8px;
 }
 
 @media (max-width: 550px) {
     h6{
         border-top: none;
+    }
+    
+    .setumei_title{
+        margin-bottom: 10px;
+    }
+    
+    .setumei_text{
+         margin-bottom: 10px;
     }
 }
 
@@ -788,7 +875,7 @@ table{//pc版の表
     border: 0.5px $gray solid;
     text-align: center;
     width: 30%;//%で指定しないとスマフォ表示のときに画面からはみ出る
-    
+    font-size: 8px;
 }
 
 .color-size2 th{
@@ -807,10 +894,10 @@ table{//pc版の表
 
 @media (max-width: 550px) {
    table{
-       width: 110%;
+       width: 100%;
        //text-align: center;
        margin-bottom: 15px;
-       margin-left: -13px;
+       margin-left: 0;
    }
    .color-size2 td{
        width: 35%;
@@ -822,6 +909,7 @@ table{//pc版の表
        width: 10%;
        font-weight: normal;
        padding: 5px;
+       font-size: 8px;
    } 
     
 }//@media (max-width: 550px)
